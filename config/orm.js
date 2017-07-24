@@ -5,9 +5,11 @@ console.log('ORM initiated');
 // Helper function for SQL syntax.
 function printQuestionMarks(num) {
   var arr = [];
+  console.log("Num: "+num);
 
-  for (var i = 0; i < num; i++) {
+  for (let i = 0; i < num; i++) {
     arr.push("?");
+    console.log("arr: "+arr.toString());
   }
 
   return arr.toString();
@@ -40,6 +42,28 @@ var orm = {
       console.log('ALL', result);
     });
   },
+
+  create: function(table, cols, vals, cb) {
+    console.log(vals);
+    // var queryString = "INSERT INTO " + table + ' (' + cols + ') ' + 'VALUES (' + vals + ')';
+    var queryString = "INSERT INTO " + table
+    queryString += " (";
+    queryString += cols.toString();
+    queryString += ") ";
+    queryString += "VALUES (";
+    queryString += printQuestionMarks(vals.length);
+    queryString += ") ";
+
+    console.log('Query string', queryString);
+
+    connection.query(queryString, vals, function(err, result) {
+      if (err) {
+        throw err;
+      }
+      cb(result);
+    });
+  },
+
   update: function(table, objColVals, condition, cb) {
     var queryString = "UPDATE " + table;
 
