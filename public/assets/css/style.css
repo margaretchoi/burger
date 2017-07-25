@@ -22,9 +22,9 @@ main {
 
 }
 
-header {
+nav {
 	text-align: center;
-
+	background: #25c38e;
 }
 
 section {
@@ -38,7 +38,7 @@ h1, h2, h3, h4, h5, h6 {
 h1 {
 	text-align: center;
 	text-transform: uppercase;
-	font-size: 2em;
+	font-size: 3em;
 }
 
 p {
@@ -50,32 +50,52 @@ button {
 }
 
 #page-header {
-	border: solid 5px rgba(246,200,71,1);
+	margin: 0px;
+	padding: 20px;
 }
+
+#page-body {
+
+}
+
 
 .drawn-border {
 	display: block;
-	margin:5% auto;
+	margin: 0 auto;
 	border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
 	padding:1em;
 	line-height:1.5em;
 	background:hsla(67, 95%, 95%, 1);
 	color: hsla(0, 95%, 35%, 1);
+	border: solid 5px rgba(246,200,71,1);
 }
 
 
 .parallax { 
-    background-image: url(../images/burger-background.jpg);
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
     text-align: center;
     padding: 30px;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	background-image: url(../images/burger-background.jpg);
+	background-color: #fff;
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
 }
 
+.parallax img {
 
+}
 
+.burger-options {
+	display: flex;
+	justify-content: row;
+}
+.options {
+	flex-grow: 1;
+}
 
 .create-update-form .form-group {
 	position: relative;
@@ -103,7 +123,7 @@ label {
 input[type=text] {
   width: 100%;
   padding: 20px;
-  border: 1px solid teal;
+/*  border: 1px solid teal;*/
   font-size: 20px;
   color: teal;
 } 
