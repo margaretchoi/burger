@@ -1,10 +1,11 @@
 var mysql      = require('mysql');
-var connection = mysql.createConnection({
-  host     : 'localhost',
-  user     : 'root',
-  password : '&&iH6I>(ashT',
-  database : 'burgers_db'
-});
+
+// var connection = mysql.createConnection({
+//   host     : 'localhost',
+//   user     : 'root',
+//   password : '&&iH6I>(ashT',
+//   database : 'burgers_db'
+// });
  
 
 
@@ -14,8 +15,8 @@ if(process.env.JAWSDB_URL) {
 	connection= mysql.createConnection({
 	  host     : 'localhost',
 	  user     : 'root',
-	  password : 'hacktheplanet',
-	  database : 'todoagain_db'
+	  password : '&&iH6I>(ashT',
+	  database : 'burgers_db'
 	});
 };
 
