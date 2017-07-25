@@ -25,7 +25,15 @@ main {
 nav {
 	text-align: center;
 	background: #25c38e;
+	position: relative;
 }
+
+.shadow1 {
+	-webkit-box-shadow: 0 10px 10px 0px rgba(0,0,0, 0.5);
+	-moz-box-shadow: 0 10px 10px 0px rgba(0,0,0, 0.5);
+	box-shadow: 0 10px 10px 0px rgba(0,0,0, 0.5);
+}
+
 
 section {
 }
@@ -47,6 +55,16 @@ p {
 
 button {
 
+}
+
+button:hover {    
+	animation-name: buttonHover;
+    animation-duration: 0.25s;
+    animation-timing-function: ease-in;
+    animation-fill-mode: forwards;
+}
+@keyframes buttonHover {
+    to {background-color: rgba(246,200,71,1);}
 }
 
 #page-header {
