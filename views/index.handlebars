@@ -4,7 +4,8 @@
 
 
 <main>
-    <section>
+    <section class="burger-options">
+        <div class="options">
         <h2>Add a Burger</h2>
         <form class="create-update-form" action="/" method="POST">
             <div class="form-group">
@@ -13,26 +14,6 @@
                 <button class="add-burger" type="submit">Add Burger</button>
             </div>
         </form>
-    </section>
-    <section class="burger-options">
-        <div class="options">
-            <div>
-                <h2>All Burgers</h2>
-
-                <ul>
-                  {{#each burgers}}
-                      <li>
-                        {{this.burger_name}}
-                        <form action="/{{this.id}}?_method=PUT" method="POST">
-                          <input type="hidden" name="id" value="{{this.id}}">
-                            {{#unless this.devoured}}
-                                <button type="submit">Devour It!</button>
-                            {{/unless}}
-                        </form>
-                      </li>
-                  {{/each}}
-                </ul>
-            </div>
         </div>
         <div class="options">
             <div>

@@ -28,8 +28,6 @@ function objToSql(ob) {
   return arr.toString();
 }
 
-
-
 var orm = {
   all: function(table, cb) {
     var queryString = "SELECT * FROM " + table + ";";
